@@ -1,11 +1,16 @@
 import React from 'react';
-
+import SiteContext from './context/site.js';
 import ToDo from './components/todo/todo.js';
+import './app.css'
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <ToDo />
+      <SiteContext>
+        <ToDo />
+      </SiteContext>
     );
   }
 }
+
+export default App;
