@@ -96,11 +96,13 @@ const ToDo = () => {
           </Card>
         ))}
       </div>
-      
     </div>
-    {getTotalPages().map(item => (
-        <Button className="pagination" onClick={() => handleCurrentPage(item)}>{item}</Button>
+    <div className="pagination">
+      {getTotalPages().map(item => (
+        <Button onClick={() => handleCurrentPage(item)}>{item}</Button>
       ))}
+    </div>
+
     </>
   );
 };
